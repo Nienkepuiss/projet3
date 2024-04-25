@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // MODALE //
+//open//
 
 document.addEventListener("DOMContentLoaded", function() {
   const openModale = function(e) {
@@ -151,7 +152,20 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
       console.error("L'élément avec l'ID 'button-modale' n'a pas été trouvé.");
   }
+  
 });
+
+//close//
+
+const buttonClose = document.getElementById("close-modale");
+const modal = document.getElementById("modale");
+
+  function closeModale() {
+    modal.style.display = "none";
+  }
+
+  buttonClose.addEventListener("click", closeModale)
+
 
 
 
