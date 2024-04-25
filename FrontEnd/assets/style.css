@@ -256,9 +256,6 @@ footer nav ul {
 	font-family: 'work sans';
 	text-decoration: none;
 }
-#button-modale :hover{
-	cursor: pointer;
-}
 .btn-modifier{
 	display: none;
 	margin-bottom: 2em;
@@ -267,7 +264,9 @@ footer nav ul {
 .btn-modifier i, .btn-modifier a{
 	color: black;	
 }
-
+.btn-modifier :hover{
+	color: #B1663C;
+}
 #modale{
 	position:fixed;
 	display: flex;
@@ -286,10 +285,19 @@ footer nav ul {
 	border-radius: 10px;
 	background-color: #fff;
 }
+.close{
+	display: flex;
+	justify-content: flex-end;
+	
+}
 #close-modale{
 	background: none;
 	border: none;
-	padding: 10px;
+	padding-top: 20px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
 }
 #close-modale :hover{
 	cursor: pointer;
