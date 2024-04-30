@@ -15,17 +15,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
 	<div class="connexion-banner">
 	   <i class="fas fa-light fa-pen-to-square"></i>
 	   <p>Mode édition</p>
 	</div>
-
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<a>projets</a>
+			<a href="#portfolio">projets</a>
 			<a>contact</a>
 			<a href="login.html" id="loggedIn">login</a>
 			<a href="index.html" id="loggedOut">logout</a>
@@ -33,6 +31,7 @@
 		</ul>
 	</nav>
 </header>
+
 <main>
 	<section id="introduction">
 		<figure>
@@ -45,6 +44,7 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
+
 	<section id="portfolio">
 	<div class="user-mode">
 		<h2>Mes Projets</h2>
@@ -58,13 +58,35 @@
    </section>
 
    <aside id="modale" aria-hidden="true" role="dialog" style="display: none;">
-	<div class="modale-content">
-		<div class="close">
-		<button id="close-modale"><i class="fa-solid fa-xmark"></i></button>
-		</div>
-		<h3>Galerie photo</h3>
-	</div>
+	  <div class="modale-content">
+		     <button id="close-modale"><i class="fa-solid fa-xmark"></i></button>
+		     <h3>Galerie photo</h3>
+		     <div class="modale-gallery"></div>
+		     <div class="btn-add">
+		     <button id="add-picture">Ajouter une photo</button>
+	     </div>
+	  </div>
    </aside>
+   <aside id="modale-add" aria-hidden="true" role="dialog" style="display: none;">
+		<div class="modale2">
+		      <h3>Ajout photo</h3> 
+		      <form id="add-form" name="add-form">
+			    <div id="labelPhoto">
+				    <i class="fa-regular fa-image" id="pictureIcon"></i>
+				    <label for="photo" id="photo-library">+ Ajouter photo</label>
+			        <input type="file" class="photo" name="photo" id="photo" accept="image/png, image/jpeg" required> 
+			        <p>jpg, png : 4mo max</p>
+			   </div>
+			   <label for="title">Titre</label>
+			   <input type="text" id="title" name="title" required>
+			   <label for="selectCategory">Catégorie</label>
+			   <select id="selectCategory" name="selectCategory"></select> 
+		     </form>
+			 <input type="submit" id="valider" value="valider">
+	        <button id="return-btn"><i class="fa-solid fa-arrow-left"></i></button>
+			<button id="close-modale2"><i class="fa-solid fa-xmark"></i></button>
+	  </div>
+  </aside>
 
 	<section id="contact">
 		<h2>Contact</h2>

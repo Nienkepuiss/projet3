@@ -1,6 +1,23 @@
 body{
     background-color: #FFFEF8;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer{
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+}
+footer nav{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
 nav ul li, .btn-connexion:hover{
     cursor: pointer;
 }
