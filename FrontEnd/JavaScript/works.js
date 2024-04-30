@@ -370,6 +370,7 @@ function sendNewData(token, formData, title, category) {
     .then ((data) => {
       addToWork(data, category);
       displayWork(work);
+      modaleGallery(work);
       document.getElementById("modale").style.display = "none";
       document.getElementById("modale-add").style.display = "none";
     })
