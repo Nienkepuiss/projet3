@@ -211,7 +211,7 @@ function deleteWorkById(i) {
     },
   }).then((response) => {
     if (response.ok) {
-      alert("projet supp avec succes")
+      alert("projet supprimé avec succès")
       work = work.filter((work) => work.id != i);
       displayWork(work);
       modaleGallery(work);
@@ -351,6 +351,24 @@ const addToWork = function(data, category) {
 }
 
 //API call for new work//
+
+// reset add form after work added //
+
+function resetModalForm() {
+        document.getElementById("title").value = ""; 
+        document.getElementById("selectCategory").selectedIndex = 0; 
+        document.getElementById("modale").style.display = "none"; 
+        document.getElementById("photo").style.display = "none";
+        document.getElementById("photo-library").style.display = "flex";
+        document.querySelector("#labelPhoto > p").style.display = "flex";
+        document.querySelector("#pictureIcon").style.display = "flex";
+        // Supprimer l'image affichée
+        const imgPreview = labelPhoto.querySelector("img");
+        if (imgPreview) {
+          imgPreview.remove();
+        }
+      }
+
 function sendNewData(token, formData, title, category) {
   fetch("http://localhost:5678/api/works", {
     method: "POST",
@@ -371,8 +389,8 @@ function sendNewData(token, formData, title, category) {
       addToWork(data, category);
       displayWork(work);
       modaleGallery(work);
-      document.getElementById("modale").style.display = "none";
-      document.getElementById("modale-add").style.display = "none";
+      resetModalForm();
     })
+
     .catch((error) => console.error("Erreur:", error));
-  }}
+}}

@@ -268,10 +268,12 @@ footer nav ul {
 .btn-modifier{
 	display: none;
 	margin-bottom: 2em;
-	gap: 10px;
+}
+.btn-modifier i{
+	padding-right: 10px;
 }
 .btn-modifier i, .btn-modifier a{
-	color: black;	
+	color: black;
 }
 .btn-modifier :hover{
 	color: #B1663C;
