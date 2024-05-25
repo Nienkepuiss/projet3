@@ -31,7 +31,7 @@ Use of `Git` for version control.<br>
 
 -   `npm start` or `yarn start`
 
-#### Compte admin de test
+#### Admin account :
 
 > email: sophie.bluel@test.tld
 
